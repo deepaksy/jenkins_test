@@ -2,8 +2,6 @@ pipeline {
 	agent {
 		dockerContainer {
 			image 'node:14'
-			label 'my-docker-nodejs'
-			args '-u root'
     }
   }
 
@@ -25,16 +23,6 @@ pipeline {
 	        steps {
 		    sh 'npm test'
 		}
-	}
-
-  post {
-	    success {
-	    	echo 'Pipeline succeeded!'
-	    }
-	    faliure {
-	        echo 'Pipeline failed :('
-	    }
-
 	}
 }
 }
