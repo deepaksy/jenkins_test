@@ -12,4 +12,5 @@ export class AppComponent {
   title = 'myapp';
   about = 'about';
   myvar= 'test';
+  testvar = '';
 }
