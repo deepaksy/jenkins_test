@@ -4,8 +4,8 @@ pipeline {
 			image: 'node:14'
 			label 'my-docker-nodejs'
 			args '-u root'
-		{
-	{
+    }
+  }
 
 	stages {
 	    stage('Checkout') {
