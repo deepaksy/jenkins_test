@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		docker {
+		dockerContainer {
 			image 'node:14'
 			label 'my-docker-nodejs'
 			args '-u root'
@@ -27,7 +27,7 @@ pipeline {
 		}
 	}
 
-        post {
+  post {
 	    success {
 	    	echo 'Pipeline succeeded!'
 	    }
